@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <tittle>JS EXAMPLE</tittle>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div>
+            <p>Ejercicio 4 Matrices</p>
+        </div>
+       <!-- Sea la tabla tb de 2 dimensiones, con 4 filas y 5 columnas. Realizar las siguientes operaciones:
+        Introducir por teclado los valores en las 3 primera filas y las 4 primeras columnas 
+        (se conserva la última línea y la última columna libres para los totales de líneas y columnas)
+        Sumar las columnas en la última línea y las líneas en la última columna-->
+       <script>
+       var tabla = new Array(4);
+       for (let i=0; i<4; i++){
+            tabla[i]= new Array(5)
+
+       }
+       let totalfila;
+       for (let j=0; j<3; j++){
+            totalfila=0;
+            for (let k=0; k<4; k++){
+             tabla[j][k]= parseInt( prompt ("Introduce el valor de la fila "+j+" y de la columna "+k));
+             totalfila+=tabla[j][k]
+            }
+            tabla[j][4]=totalfila;
+
+
+        let totalcolumna;    
+        }
+        for(let j=0;j<5;j++){
+            totalcolumna=0;
+            for(let i=0;i<3;i++){
+                totalcolumna+=tabla[i][j];
+            }
+            tabla[3][j]=totalcolumna;
+
+        }
+        document.write("<table border='2' bordercolor='0000ff' width='75%' align='center' >")
+        document.write("  <caption><b>Suma Filas y Columnas</b></caption>")    
+        for (i=0;i<4;i++){
+            document.write("<tr>")
+                for (j=0; j<5; j++){
+                    document.write("<td><center>"+tabla[i][j]+"</center></td>");
+                }
+            document.write("</tr>") 
+
+        }
+        document.write("</table>")
+        
+
+        
+       </script>
+      
+      
+
+    </body>
+
+</html>

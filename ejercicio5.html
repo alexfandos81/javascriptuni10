@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <tittle>JS EXAMPLE</tittle>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div>
+            <p>Ejercicio LETRA DNI</p>
+        </div>
+       <!-- Escribir un algoritmo que permita extraer las iniciales de una persona, introduciendo 
+        el apellido y el nombre por el teclado (ejemplo JP para José Pérez)-->
+       <script>
+        var letras = ['T','R','W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N','J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T' ];
+        let num_dni = prompt ("Introduce los 8 dígitos numéricos de tu DNI:");
+        let letra_dni= prompt ("Introduce la letra de tu de tu DNI:");
+        letra_dni= letra_dni.toUpperCase();
+        let pos;
+        if (num_dni.length ==8){
+            num_dni= parseInt(num_dni);
+            
+                pos= (num_dni % 23);
+                console.log(pos);
+                console.log(letras[pos]);
+                if (letras[pos]==letra_dni){
+                    document.write("la letra para el número de tu DNI "+ num_dni +" es:"+ letras[pos]+"<br>"); 
+                } else{
+
+                    document.write("La letra que has dado no coincide<br>");
+                }
+
+            
+            
+        }
+  
+        else{
+
+        document.write("El número debe tener 8 dígitos<br>");
+        }         
+    
+    
+       </script>
+      
+      
+
+    </body>
+
+</html>

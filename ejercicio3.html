@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <tittle>JS EXAMPLE</tittle>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div>
+            <p>Ejercicio 1</p>
+        </div>
+       <!-- Determinar la cantidad de números pares de una tabla (introducir inicialmente 5 
+        valores por el teclado)-->
+       <script>
+        let par= new Array; 
+        let pares=0;
+        let numero;
+        let cant = parseInt(prompt ("Cuántos números tendrá el array:"));
+
+        for(let i = 0; i < cant; i++) {
+            numero = prompt ("Introduce un numero par o impar:");
+            par[i]=parseInt(numero);
+        }
+        for (let j=0; j<cant; j++){
+            if ((par[j]%2) ==0){
+                document.write(par[j] + " es par"+"<br>" );
+                pares+=1;
+            }
+            else{
+                document.write(par[j] + " no es par"+"<br>");
+            }
+        }
+        document.write("<br>En total tenemos "+ pares + " números pares" );
+     
+
+        
+       </script>
+      
+      
+
+    </body>
+
+</html>

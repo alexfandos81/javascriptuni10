@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <tittle>JS EXAMPLE</tittle>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div>
+            <p>Ejercicio 1</p>
+        </div>
+       <!-- Calcular la media de n números reales introducidos por teclado (la lista termina con
+        un cero)-->
+       <script>
+        let numero = prompt ("Introduce un numero:" );
+        console.log(typeof numero);
+        let total=0;
+        let cantidad=0;
+        while(numero != 0) {
+            cantidad ++;
+            total+=parseInt(numero);
+            numero = prompt ("Introduce otro numero:" );
+            }
+        total= total/cantidad;    
+        document.write("La media de estos números es: "+ total);   
+
+        
+       </script>
+      
+      
+
+    </body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <tittle>JS EXAMPLE</tittle>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div>
+            <p>Adivina el número secreto</p>
+        </div>
+    
+       <script>
+        const MAX = 10;
+        const MIN= 1;
+        let adivina= parseInt(prompt ("¿Qué número quieres que adivine el participante?:"));
+        let numero = parseInt(prompt ("Dime un número entre: "+MAX+" y "+MIN));
+        for (let i=0;i<3;i++){
+            
+            if (numero>MAX || numero<MIN){
+                numero = parseInt(prompt ("Este no es válido. Dime un número entre: "+MAX+" y "+MIN));
+            }
+            if (numero==adivina){
+                document.write("Enhorabuena, has adivinado el numero en el intento: " + (i+1));
+                break;
+            }
+            else{
+                if (i<2){
+                    numero = parseInt(prompt ("Lo siento. Has fallado. Dime un número entre: "+MAX+" y "+MIN));
+
+                }
+               
+            }
+        }
+        if (numero!=adivina){
+            document.write("Se acabó!!Lo siento, has superado los 3 intentos")
+        }
+
+
+       </script>
+      
+      
+
+    </body>
+
+</html>
